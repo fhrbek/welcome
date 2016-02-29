@@ -19,7 +19,11 @@ class welcome (
     notify => Service['nginx'],
   }
 
-  file { '/etc/nginx/default.conf':
+  file { ['/etc/nginx', '/etc/nginx/conf.d']:
+    ensure => directory
+  }
+
+  file { '/etc/nginx/conf.d/default.conf':
     ensure => file,
     content => template('welcome/default.conf.erb'),
     require => Package['nginx'],
