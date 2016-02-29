@@ -30,6 +30,12 @@ class welcome (
     notify => Service['nginx'],
   }
 
+  file { '/etc/nginx/site-enabled/default':
+    ensure => absent,
+    require => Package['nginx'],
+    notify => Service['nginx'],
+  }
+
   service { 'nginx':
     ensure => running,
     enable => true,
