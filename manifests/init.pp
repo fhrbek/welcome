@@ -30,7 +30,7 @@ class welcome (
     notify => Service['nginx'],
   }
 
-  file { '/etc/nginx/site-enabled/default':
+  file { '/etc/nginx/sites-enabled/default':
     ensure => absent,
     require => Package['nginx'],
     notify => Service['nginx'],
