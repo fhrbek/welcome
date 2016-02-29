@@ -35,7 +35,7 @@ class welcome (
     enable => true,
     require => [
       Package['nginx'],
-      File['/var/pug/index.html','/etc/nginx/default.conf'],
+      File['/var/pug/index.html','/etc/nginx/conf.d/default.conf'],
     ]
   }
 }
