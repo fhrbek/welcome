@@ -21,7 +21,7 @@ class welcome (
 
   file { '/etc/nginx/default.conf':
     ensure => file,
-    content => template('nginx/default.conf.erb'),
+    content => template('welcome/default.conf.erb'),
     require => Package['nginx'],
     notify => Service['nginx'],
   }
