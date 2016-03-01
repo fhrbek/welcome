@@ -15,7 +15,7 @@ class welcome (
 
   file { '/var/pug/index.html':
     ensure => file,
-    content => '<html><body>PUG is awesome!</body></html>',
+    content => template('welcome/index.html.erb'),
     notify => Service['nginx'],
   }
 
