@@ -1,6 +1,6 @@
 <html>
   <head>
-    <style type='text/css'>
+    <style type="text/css">
       body {
         font-family: Helvetica;
         font-size: 5em;
@@ -23,15 +23,18 @@
       }
       
       .pug-osfamily {
-        font-weight: 400;
         color: #f55;
+      }
+      
+      .pug-host {
+        color: #55f;
       }
     </style>
   </head>
   <body>
-    <div class='pug-container'>
-      <div class='pug-title'>PUG is awesome!</div>
-      <div class='pug-powered-by'>Powered by <span class='pug-osfamily'><%= @os['family'] %></span> from <%= @clientcert %></div>
+    <div class="pug-container">
+      <div class="pug-title">PUG is awesome!</div>
+      <div class="pug-powered-by">Powered by <span class="pug-osfamily"><%= @os['family'] %></span> from <span class="pug-host"><%= @clientcert %></span></div>
     </div>
   </body>
 </html>
